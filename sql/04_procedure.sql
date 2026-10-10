@@ -23,7 +23,7 @@ SELECT
     a.name,
     a.species,
     a.status,
-    COUNT(t.treatment_id)              AS treatment_count,
+    COUNT(t.treatment_id) AS treatment_count,
     ROUND(COALESCE(SUM(t.cost), 0), 2) AS total_treatment_cost
 FROM animals AS a
 JOIN species_cost_param AS p
